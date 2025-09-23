@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
-import ErroAlert from "../ErroAlert";
+import ErrorAlert from "../ErrorAlert";
 import apiClient from "../../services/api-client";
 
 const ActivateAccount = () => {
@@ -45,7 +45,7 @@ const ActivateAccount = () => {
             <span>{message}</span>
           </div>
         )}
-        {error && <ErroAlert error={error} />}
+        {error && <ErrorAlert error={error} />}
       </div>
     </div>
   );
