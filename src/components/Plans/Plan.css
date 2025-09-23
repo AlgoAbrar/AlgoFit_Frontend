@@ -1,0 +1,52 @@
+/* Plan.css */
+.plan-swiper {
+  padding: 20px 0;
+  margin: 0 -12px;
+}
+
+.plan-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.plan-swiper .swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Custom navigation hover effects */
+.plan-prev:hover,
+.plan-next:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .plan-swiper {
+    margin: 0 -8px;
+  }
+
+  .plan-prev,
+  .plan-next {
+    display: none;
+  }
+}
+
+/* Animation for the progress indicators */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.plan-swiper .swiper-pagination-bullet-active {
+  animation: pulse 2s infinite;
+}

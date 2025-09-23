@@ -1,0 +1,82 @@
+/* HeroCarousel.css */
+.hero-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom pagination styles */
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  background: rgba(30, 30, 30, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+}
+
+.custom-bullet {
+  position: relative;
+  width: 40px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin: 0 4px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.custom-bullet-active {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.custom-bullet-active .progress-bar {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+  animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Navigation button hover effects */
+.custom-prev:hover,
+.custom-next:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-bullet {
+    width: 25px;
+    height: 3px;
+  }
+
+  .custom-pagination {
+    padding: 0.25rem;
+  }
+}
+
+/* Swiper default navigation customization */
+.hero-swiper .swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
