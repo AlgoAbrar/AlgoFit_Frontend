@@ -3,6 +3,8 @@ import About from "../pages/About";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import Shop from "../pages/Shop";
+import Plans from "../pages/Plans";
+import Reviews from "../pages/Reviews";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
@@ -25,6 +27,8 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="shop" element={<Shop />} />
+        <Route path="plans" element={<Plans />} />
+        <Route path="reviews" element={<Reviews />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="activate/:uid/:token" element={<ActivateAccount />} />
