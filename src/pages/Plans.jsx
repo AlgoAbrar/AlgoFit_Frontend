@@ -244,7 +244,7 @@ const Plans = () => {
                   {/* Action Buttons */}
                   <div className="flex items-center gap-2">
                     <Link
-                      to={`/plans/${plan.id}`}
+                      to={`/shop/${plan.id}`}
                       className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-3 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center gap-1"
                     >
                       <FiEye className="w-4 h-4" />
